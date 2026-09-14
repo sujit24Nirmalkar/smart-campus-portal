@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attandance_tab</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="attendance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    <!-- sidebar section -->
+    <div class="sidebar">
+        <div id="navbar">
+            <div class="dash-head">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2 id="nav-head">Campus Hub</h2>
+            </div>
+
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a class="nav-link effect click" href="#">
+                            <i class="fa-regular fa-house"></i>
+                            <p class="icon-name">Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link effect click" href="#">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p class="icon-name">Events</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link effect click" href="complaint_voting.html">
+                            <i class="fa-regular fa-message"></i>
+                            <p class="icon-name">Complaints</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link effect click active-link" href="attendance.html">
+                            <i class="fa-regular fa-life-ring"></i>
+                            <p class="icon-name">Attandance</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link effect click" href="#">
+                            <i class="fa-regular fa-bell"></i>
+                            <p class="icon-name">Notices</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link effect click" href="#">
+                            <i class="fa-regular fa-star"></i>
+                            <p class="icon-name">Feedback</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- main content area -->
+    <div class="main-content">
+
+        <div id="heading">
+            <div id="headtext"><b>Attendance</b></div>
+            <div id="user-section">
+                <div id="profilepic"></div>
+                <div id="username">
+                    <div id="name"><b>Mr. Vinayak</b></div>
+                    <marquee behavior="slide" direction="up"><div id="intro">B.tech (AIML) 2<sup>nd</sup> Year</div></marquee>
+                </div>
+            </div>
+        </div>
+
+        <!-- summary stat cards -->
+        <div id="stats-row">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-regular fa-chart-pie"></i></div>
+                <div class="stat-text">
+                    <div class="stat-value">82%</div>
+                    <div class="stat-label">Overall Attendance</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-regular fa-circle-check"></i></div>
+                <div class="stat-text">
+                    <div class="stat-value">246</div>
+                    <div class="stat-label">Classes Attended</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-regular fa-circle-xmark"></i></div>
+                <div class="stat-text">
+                    <div class="stat-value">54</div>
+                    <div class="stat-label">Classes Missed</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fa-regular fa-triangle-exclamation"></i></div>
+                <div class="stat-text">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Below 75%</div>
+                </div>
+            </div>
+        </div>
+
+        <select name="Semester" id="catagory">
+            <option value="">---Select Semester---</option>
+            <option value="sem1">Semester 1</option>
+            <option value="sem2" selected>Semester 2</option>
+        </select>
+
+        <!-- attendance box -->
+        <div id="attendance-box">
+            <div id="box-head">
+                <h3 id="box-heading"><b>Subject-wise Attendance</b></h3>
+                <div id="total-box">6 Subjects</div>
+            </div>
+
+            <!-- table header -->
+            <div class="table-row table-header">
+                <div class="col col-subject">Subject</div>
+                <div class="col col-classes">Held</div>
+                <div class="col col-classes">Attended</div>
+                <div class="col col-bar">Percentage</div>
+                <div class="col col-status">Status</div>
+            </div>
+
+            <!-- subject row 1 -->
+            <div class="table-row">
+                <div class="col col-subject"><b>C Programming</b></div>
+                <div class="col col-classes">48</div>
+                <div class="col col-classes">44</div>
+                <div class="col col-bar">
+                    <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+                    <span class="bar-percent">92%</span>
+                </div>
+                <div class="col col-status"><div class="status-pill status-safe">Safe</div></div>
+            </div>
+
+            <!-- subject row 2 -->
+            <div class="table-row">
+                <div class="col col-subject"><b>Engineering Chemistry</b></div>
+                <div class="col col-classes">40</div>
+                <div class="col col-classes">34</div>
+                <div class="col col-bar">
+                    <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+                    <span class="bar-percent">85%</span>
+                </div>
+                <div class="col col-status"><div class="status-pill status-safe">Safe</div></div>
+            </div>
+
+            <!-- subject row 3 -->
+            <div class="table-row">
+                <div class="col col-subject"><b>Operating Systems</b></div>
+                <div class="col col-classes">36</div>
+                <div class="col col-classes">27</div>
+                <div class="col col-bar">
+                    <div class="bar-track"><div class="bar-fill bar-warn" style="width:75%"></div></div>
+                    <span class="bar-percent">75%</span>
+                </div>
+                <div class="col col-status"><div class="status-pill status-warn">Warning</div></div>
+            </div>
+
+            <!-- subject row 4 -->
+            <div class="table-row">
+                <div class="col col-subject"><b>Computer Networks & Security</b></div>
+                <div class="col col-classes">42</div>
+                <div class="col col-classes">28</div>
+                <div class="col col-bar">
+                    <div class="bar-track"><div class="bar-fill bar-critical" style="width:67%"></div></div>
+                    <span class="bar-percent">67%</span>
+                </div>
+                <div class="col col-status"><div class="status-pill status-critical">Critical</div></div>
+            </div>
+
+            <!-- subject row 5 -->
+            <div class="table-row">
+                <div class="col col-subject"><b>Cyber Law & Ethics</b></div>
+                <div class="col col-classes">30</div>
+                <div class="col col-classes">27</div>
+                <div class="col col-bar">
+                    <div class="bar-track"><div class="bar-fill" style="width:90%"></div></div>
+                    <span class="bar-percent">90%</span>
+                </div>
+                <div class="col col-status"><div class="status-pill status-safe">Safe</div></div>
+            </div>
+
+            <!-- subject row 6 -->
+            <div class="table-row">
+                <div class="col col-subject"><b>Indian Constitution & Culture</b></div>
+                <div class="col col-classes">28</div>
+                <div class="col col-classes">19</div>
+                <div class="col col-bar">
+                    <div class="bar-track"><div class="bar-fill bar-critical" style="width:68%"></div></div>
+                    <span class="bar-percent">68%</span>
+                </div>
+                <div class="col col-status"><div class="status-pill status-critical">Critical</div></div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+</body>
+</html>

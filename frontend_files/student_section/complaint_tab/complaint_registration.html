@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint-registration</title>
+    <link rel="stylesheet" href="complaint_registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+<body>
+    <div class = "sidebar">
+        <div id = "navbar">
+            <div class="dash-head">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2 id = "nav-head">Campus Hub</h2>
+            </div>   
+
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a class="nav-link  effect click" href="#">
+                            <i class="fa-regular fa-house"></i>
+                            <p class = "icon-name">Dashboard</p>
+                        </a>
+                    </li>
+
+                    
+                    <li >
+                        <a class="nav-link  effect click" href="#">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p class="icon-name">Events</p>
+                        </a>
+                    </li>
+
+                    <li >
+                        <a class="nav-link  effect click" href="#">
+                            <i class="fa-regular fa-message"></i>
+                            <p class="icon-name">Complaints</p>
+                        </a>
+                    </li>
+                    
+                    <li >
+                        <a class="nav-link  effect click" href="#">
+                            <i class="fa-regular fa-life-ring"></i>
+                            <p class="icon-name">Attandance</p>
+                        </a>
+                    </li>
+
+                    
+                    <li >
+                        <a class="nav-link  effect click" href="#">
+                            <i class="fa-regular fa-bell"></i>
+                            <p class = "icon-name">Notices</p>
+                        </a>
+                    </li>
+
+                        
+                    <li >
+                        <a class="nav-link  effect click" href="#">
+                            <i class="fa-regular fa-star"></i>
+                            <p class="icon-name">Feedback</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div class = "settings">
+                <i class="fa-duotone fa-solid fa-gear"></i>
+                <p>settings</p>   
+            </div> -->
+        </div>
+    </div>
+
+    <div class = "main-content">
+
+        <div id="heading">
+            <div id="headtext"> <b>Complaints</b></div>
+            <div id="profilepic"></div>
+            <div id="username">
+                <div id="name"> <b>Mr. Vinayak</b></div>
+                <marquee behavior="slide" direction="up"><div id="intro">B.tech (AIML) 2<sup>nd</sup> Year</div></marquee>
+            </div>
+        </div>
+
+        <div id ="complaint-box">
+
+            <div class="upload-complaint">
+                <div id="box-head">
+                    <h3 id="box-heading"><b>Submitted Complaints</b></h3>
+                </div>
+
+                <select name="Catagory" id="catagory">
+                    <option value="">---Select Catagory---</option>
+                    <option value="catagory">catagory</option>
+                    <option value="infrastructure">Infrastructure</option>
+                    <option value="canteen">Canteen</option>
+                    <option value="others">Others</option>
+                </select>
+
+                <textarea name="" class="problem-statement" maxlength="150"></textarea>
+
+                <a id ="new-complaint-text" href="complaint_registration.html" target="_blank"> 
+                <div class="new-complaint click">SUBMIT COMPLAINT</div></a>
+
+            </div>
+
+            <div id ="complaint-box-user">
+
+                <div id="box-head">
+                    <h3 id="box-heading"><b>Submitted Complaints</b></h3>
+                    <div id="total-box">Total 9</div>
+                </div>
+                
+                <!-- complaint-section 1 -->
+                <div class="complaint-section">
+                    <div class="problem-head">
+                        <div id="prblm-id"><b>CHGTH8957</b></div>
+                        <div id="status">pending</div>
+                    </div>
+
+                    <div class="prblm-stmtn">catagory mess food quality is to low, too oily food !! fans are not</div>
+
+                    <div class="prblm-footer">
+                        <div class="prblm-stmtn">catagory</div>
+                    </div>
+                </div>
+                
+                <!-- complaint-section 2 -->
+                <div class="complaint-section">
+                    <div class="problem-head">
+                        <div id="prblm-id"><b>CHGTH8957</b></div>
+                        <div id="status">pending</div>
+                    </div>
+
+                    <div class="prblm-stmtn">catagory mess food quality is to low, too oily food !! fans are not</div>
+
+                    <div class="prblm-footer">
+                        <div class="prblm-stmtn">catagory</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
