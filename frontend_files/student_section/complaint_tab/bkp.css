@@ -1,27 +1,4 @@
-body {
-    background-color: rgb(208, 195, 255);
-    display: flex;
-    color: rgb(54, 54, 54);
-    font-family: Arial, Helvetica, sans-serif;
-    scrollbar-width: none;
-}
-.sidebar{
-    width: 24%;
-    height: 1020px;
-    /* background-color: rgb(10, 10, 10); */
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-content {
-    width: 76%;
-    height: 1020px;
-    /* background-color: rgb(196, 94, 94); */
-    position: absolute;
+   position: absolute;
     right: 0px;
     top: 0px;
     display: flex;
@@ -36,6 +13,7 @@ body {
     background-color: rgb(245, 243, 243);   
     width:97%;
     height: 98%;
+    /* min-width: 0; */
     border-radius: 9px; 
     margin-bottom:0px;
     box-shadow: 0px 5px 3px rgba(0,0,0, 0.2);
@@ -52,6 +30,15 @@ body {
     box-shadow: 0px 5px 3px rgba(0,0,0, 0.2);
 }
 
+#catagory {
+    background-color:rgb-box(245, 243, 243);
+    width: 98%;
+    height: 50px;
+    border-radius: 9px; 
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 5px 3px rgba(0,0,0, 0.2);
+}
 
 #complaint-box{
     background-color: rgb(245, 243, 243);
@@ -98,10 +85,16 @@ body {
     height: 40px;
     border-radius: 50%; 
     position: relative;
-    left:25%;
-    /* margin: 0 0 0 500px; */
+    margin:20px; 
     background-image: url("mr.vinayak.jpeg");
     background-size: cover;
+}
+
+#user-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
 }
 
 #username {
@@ -156,13 +149,14 @@ li {
     /* display: inline-block; */
     
 }
-.icons{
+.icon-name{
     /* background-color: rgb(54, 202, 202); */
     display:flex;
     align-items: center; 
-    position: relative;
-    left:1rem
-
+    min-width: 0;
+    margin-top: 20px;
+    /* position: relative;
+    left:1rem; */
 }
 
 .nav-link{
@@ -170,18 +164,20 @@ li {
     text-decoration: none;
     color: rgb(54, 54, 54);
     display: flex;
-    align-items: center;
+    align-items: center;     
+}
+
+
+.nav-link i, .nav-link svg {
+    flex-shrink: 0;
 }
 
 .fa-regular{
     /* background-color: aquamarine; */
     scale: calc(1.5);
     margin: 0 15px;
-}
-
-.settings{
-    background-color: aquamarine;
-    
+    min-width: 0;
+    flex-shrink: 0;
 }
 
 .fa-graduation-cap{
@@ -197,16 +193,10 @@ li {
     margin-left: 30px;
 }
 
-.navigation {
-    height: 70%;  
-}
-
 .effect:hover{
     background-color: rgba(112, 112, 202,0.5);
     border-radius: 10px;
 }
-
-
 
 .click:active{
     background-color: rgba(22, 22, 204, 0.5);
@@ -279,14 +269,4 @@ li {
     justify-content: center;
     margin: 5px;
     border: 2px solid rgba(137, 43, 224,0.4);
-}
-
-#catagory {
-    background-color:rgb-box(245, 243, 243);
-    width: 98%;
-    height: 50px;
-    border-radius: 9px; 
-    border: none;
-    font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 0px 5px 3px rgba(0,0,0, 0.2);
 }

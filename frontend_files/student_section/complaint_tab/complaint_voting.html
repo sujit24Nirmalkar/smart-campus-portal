@@ -9,82 +9,73 @@
 </head>
 <body>
     <!-- sidebar section -->
-    <div class = "sidebar">
-        <div id = "navbar">
-            <div class="dash-head">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <h2 id = "nav-head">Campus Hub</h2>
-            </div>   
-
-            <ul>
-                <li>
-                    <a class="nav-link  effect click" href="#">
-                        <i class="fa-regular fa-house"></i>
-                        <p class = "icon-name">Dashboard</p>
-                    </a>
-                </li>
-
-                
-                <li >
-                    <a class="nav-link  effect click" href="#">
-                        <i class="fa-regular fa-calendar"></i>
-                        <p class="icon-name">Events</p>
-                    </a>
-                </li>
-
-                <li >
-                    <a class="nav-link  effect click" href="#">
-                        <i class="fa-regular fa-message"></i>
-                        <p class="icon-name">Complaints</p>
-                    </a>
-                </li>
-                
-                <li >
-                    <a class="nav-link  effect click" href="#">
-                        <i class="fa-regular fa-life-ring"></i>
-                        <p class="icon-name">Attandance</p>
-                    </a>
-                </li>
-
-                
-                <li >
-                    <a class="nav-link  effect click" href="#">
-                        <i class="fa-regular fa-bell"></i>
-                        <p class = "icon-name">Notices</p>
-                    </a>
-                </li>
-
-                    
-                <li >
-                    <a class="nav-link  effect click" href="#">
-                        <i class="fa-regular fa-star"></i>
-                        <p class="icon-name">Feedback</p>
-                    </a>
-                </li>
-            </ul>
-
-            <!-- <div class = "settings">
-                <i class="fa-duotone fa-solid fa-gear"></i>
-                <p>settings</p>   
-            </div> -->
+    <nav id="navbar">
+        <div id="nav-head">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>Campus hub</h2>
         </div>
 
-    </div>
+        <ul>
+            <li class="effect tap">
+                <a href="#">
+                    <i class="fa-regular fa-house"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+
+            <li class="effect tap" >
+                <a href="#">
+                    <i class="fa-regular fa-calendar"></i>
+                    <p>Events</p>
+                </a>
+            </li>
+
+            <li class="effect tap">
+                <a href="complaint_voting.html" target="complaint-tab">
+                    <i class="fa-regular fa-message"></i>
+                    <p>Complaints</p>
+                </a>
+            </li>
+
+            <li class="effect tap" >
+                <a href="../Attandance_tab/attandance.html" target="attandance-tab">
+                    <i class="fa-regular fa-life-ring"></i>
+                    <p>Attandance</p>
+                </a>
+            </li>
+
+            <li class="effect tap">
+                <a href="#">
+                    <i class="fa-regular fa-bell"></i>
+                    <p>Notices</p>
+                </a>
+            </li>
+
+            <li class="effect tap">
+                <a href="#">
+                    <i class="fa-regular fa-star"></i>
+                    <p>Feedback</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <!-- main content area -->
-    <div class = "main-content">
+    <div id = "content">
 
         <div id="heading">
-            <div id="headtext"> <b>Complaints</b></div>
-            <div id ="user-section">
-                <div id="profilepic"></div>
-                <div id="username">
-                    <div id="name"> <b>Mr. Vinayak</b></div>
-                    <marquee behavior="slide" direction="up"><div id="intro">B.tech (AIML) 2<sup>nd</sup> Year</div></marquee>
-                </div>
-            </div>
+            <h2>Complaints</h2>
+            <div id = user-intro> 
+                <img src= "mr.vinayak.jpeg" alt="image">
+                <div>
+                    <p id = "username"><b>Mr. Vinayak</b></p>
+                    <p>B.tech (AIML) 2<sup>nd</sup> Year</p>
+                </div>   
+            </div>    
         </div>
-    
-        <select name="Catagory" id="catagory">
+
+        <!-- compaint catagory selection -->
+        <select>
             <option value="">---Select Catagory---</option>
             <option value="catagory">catagory</option>
             <option value="infrastructure">Infrastructure</option>
@@ -94,9 +85,10 @@
 
         <!-- complaint-box -->
         <div id ="complaint-box">
+
             <div id="box-head">
-                <h3 id="box-heading"><b>Submitted Complaints</b></h3>
-                <div id="total-box">Total 9</div>
+                <h3><b>Submitted Complaints</b></h3>
+                <div>Total 9</div>
             </div>
             
             <!-- complaint-section 1 -->
@@ -226,8 +218,13 @@
             </div>
 
         </div>
+
+
+        <!-- new compalint registration -->
+
         <a id ="new-complaint-text" href="complaint_registration.html" target="_blank"> 
-        <div class="new-complaint click">NEW COMPLAINT</div></a>
+            <div class="new-complaint click">NEW COMPLAINT</div>
+        </a>
 
     </div>
 </body>
