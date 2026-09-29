@@ -164,7 +164,7 @@ body{
     height: 70px;
     width:34%;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
-    margin:10px;
+    margin:0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,9 +174,8 @@ body{
 #sub-wise-attend{
     background-color: rgb(245, 243, 243);   
     border-radius:9px;
-    height: 70px;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
-    height: 300px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -233,8 +232,8 @@ body{
 #currnt-attandance{
     background-color: rgb(245, 243, 243);   
     border-radius:9px;
-    height: 150px;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
+    height: 200px;
     width: 340px;
     display: flex;
     flex-direction: column;
@@ -251,8 +250,69 @@ body{
 #calander{
     background-color: rgb(245, 243, 243);   
     border-radius:9px;
-    height: 150px;
+    height: 200px;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
     width:650px;
 }
 
+#calander h4{
+    text-align: center;
+    margin: 4px;
+}
+
+#calander hr {
+    margin: 3px 15px;
+
+}
+
+.days p{
+    margin: 0px;
+    /* background-color: aqua; */
+    font-size: 13px;
+}
+
+.days {
+    display: flex;
+    justify-content: space-around;
+}
+
+.number{
+    /* background-color:rgba(137, 43, 224,0.7); */
+    background-color: rgb(85, 170, 100);
+    font-size: 13px;
+    width: 30px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.date{
+    /* background-color: rgb(25, 173, 173); */
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+    /* border: 2px solid black; */
+}
+
+.absent {
+    background-color: rgb(214, 76, 76);
+}
+
+.empty {
+    background-color: rgb(197, 182, 224);
+}
+
+#scale {
+    margin:0px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+}
+
+.scale-element {
+    display: flex;
+    align-items: center;
+    gap:7px;
+}
