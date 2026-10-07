@@ -21,7 +21,8 @@ body{
     display: flex; 
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(208, 195, 255);
-    color:rgb(54, 54, 54);   
+    color:rgb(54, 54, 54);  
+     
 }
 
 
@@ -86,7 +87,7 @@ body{
 /* CSS for content */
 #content{
     width: 76%;  
-    height: 100vh;;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -147,7 +148,6 @@ body{
     margin-top: 28px;  
     display: flex;
     justify-content: space-between;
-
 }
 
 
@@ -156,6 +156,7 @@ body{
 #upload-complaint{
     background-color: rgb(245, 243, 243);
     width:49%;
+    height: 502px;
     box-shadow: 0px 5px 3px rgba(0,0,0, 0.2);
     border-radius: 9px;
     display: flex;
@@ -180,7 +181,7 @@ margin :15px 230px 15px 0px;
 }
 
 #upload-complaint textarea{
-    background-color:rgb-box(245, 243, 243);
+    background-color:rgb(245, 243, 243);
     width: 90%;
     height: 100px;
     padding: 10px;
@@ -193,7 +194,7 @@ margin :15px 230px 15px 0px;
     scrollbar-width: none;
 }
 
-#upload-complaint a{
+#upload-complaint span{
     background-color: rgb(137, 43, 224);
     font-weight: 600;
     font-size: 25px;
@@ -206,6 +207,50 @@ margin :15px 230px 15px 0px;
     display:flex;
     align-items: center;
     justify-content: center;
+    pointer-events: all;
+}
+
+/* #overlay{
+    position:absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-color: aquamarine;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    z-index: -1;
+    
+} */
+
+#confirmation {
+    background-color: rgb(245, 243, 243);
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+    border-radius: 9px;
+    padding: 10px;
+    width:300px;
+    position: fixed;  
+    top:30%;
+    left:50%;
+    visibility: hidden;
+    /* filter: blur(5px);
+    z-index: 1000; */
+}
+
+
+#confirmation div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#confirmation div p{
+    background-color:rgb(201, 177, 224) ;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
 }
 
 
@@ -213,8 +258,11 @@ margin :15px 230px 15px 0px;
 #recent-complaints{
     background-color: rgb(245, 243, 243);
     width:49%;
+    height: 500px;
     box-shadow: 0px 5px 3px rgba(0,0,0, 0.2);
     border-radius: 9px;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 #head{
@@ -237,6 +285,7 @@ hr {
 .complaint p{
     margin: 0px;
 }
+
 
 .complaint {
     border-radius: 10px;
