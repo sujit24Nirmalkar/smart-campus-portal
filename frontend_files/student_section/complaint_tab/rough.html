@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="rough.css">
-  <title>rough</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Switcher</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            font-family: sans-serif;
+        }
+
+        /* Styling the arrow buttons */
+        .arrow-btn {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Styling the text display area */
+        #textDisplay {
+            font-size: 24px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <div id = "back-img"></div>
-    <div id="confirm">
-      <h1>this is a div</h1>
+
+    <div class="container">
+        <!-- Left Arrow Button -->
+        <button class="arrow-btn" id="leftArrow">&#10094;</button>
+        
+        <!-- The single element whose text changes -->
+        <div id="textDisplay">First Item</div>
+        
+        <!-- Right Arrow Button -->
+        <button class="arrow-btn" id="rightArrow">&#10095;</button>
     </div>
-  
+
+    <script>
+        // 1. Array of text strings you want to cycle through
+        const items = ["First Item", "Second Item", "Third Item", "Fourth Item"];
+        let currentIndex = 0;
+
+        // 2. Grab the DOM elements
+        const textDisplay = document.getElementById("textDisplay");
+        const leftArrow = document.getElementById("leftArrow");
+        const rightArrow = document.getElementById("rightArrow");
+
+        // 3. Right Arrow Click event
+        rightArrow.addEventListener("click", () => {
+            currentIndex++;
+            if (currentIndex >= items.length) {
+                currentIndex = 0; // Loop back to the beginning
+            }
+            textDisplay.innerText = items[currentIndex];
+        });
+
+        // 4. Left Arrow Click event
+        leftArrow.addEventListener("click", () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = items.length - 1; // Loop to the end
+            }
+            textDisplay.innerText = items[currentIndex];
+        });
+    </script>
+
 </body>
 </html>
-

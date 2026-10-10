@@ -79,93 +79,109 @@
 
             <div class="description">
                 <h1>82%</h1>
-                <p>overall</p>
+                <p>Till October</p>
             </div>
 
             <div class="description">
                 <h1>264</h1>
-                <p>Lectures attended</p>
+                <p>Lectures ttended</p>
             </div>
 
             <div class="description">
                 <h1>300</h1>
-                <p>total Lectures</p>
+                <p>Total Lectures</p>
             </div>
         </div>
-
+<!-- subjectwise attandance -->
         <div id="sub-wise-attend">
             
-            <section id = "subject">
+            <section id =subject>
                 <h3>Subject-Wise Attandance</h3>
                 <div>subject 6</div>
             </section>
             <hr width = 1000px>
 
-            <section class="attandence-bar-container">
+            <section >
                 <p>Mathematics</p>
-                <div class="attandence-bar"></div>
+                <div class="attandence-bar">
+                    <div class ="fill"></div>
+                </div> 
                 <p>100%</p>  
             </section>
             <hr width = 1000px>   
 
             <section>
                 <p>Digital Electronics and Logic Design</p>
-                <div class="attandence-bar"></div> 
+                <div class="attandence-bar">
+                    <div class ="fill"></div>
+                </div> 
                 <p>100%</p> 
             </section>
             <hr width = 1000px>   
 
             <section>
                 <p>OPPs with java</p>
-                <div class="attandence-bar"></div> 
+                <div class="attandence-bar">
+                    <div class ="fill"></div>
+                </div> 
                 <p>100%</p> 
             </section>
             <hr width = 1000px>   
 
             <section>
                 <p>Operating system</p>
-                <div class="attandence-bar"></div>
+                <div class="attandence-bar">
+                    <div class ="fill"></div>
+                </div>
                 <p>100%</p>  
             </section>
             <hr width = 1000px>  
 
             <section>
                 <p>Web Development</p>
-                <div class="attandence-bar"></div> 
+                <div class="attandence-bar">
+                    <div class ="fill"></div>
+                </div> 
                 <p>100%</p> 
             </section>
             <hr width = 1000px> 
 
             <section>
-                <p>Web Development</p>
-                <div class="attandence-bar"></div> 
+                <p>Bhagwat Gita</p>
+                <div class="attandence-bar">
+                    <div class ="fill"></div>
+                </div> 
                 <p>100%</p> 
             </section>
         </div>
 
         <div id="detail-analysis">
-<!-- calender of attandance -->
-            <div id = currnt-attandance>
-                <h1><b>84%</b></h1>
-                <p><b>September Attandance</b></p>
-            </div>
 
+            <div id = currnt-attandance>
+                <button class="arrow-btn" id="leftArrow">&#10094;</button>
+                <div>    
+                    <h1><b>84%</b></h1>
+                    <p></p>
+                </div>
+                <button class="arrow-btn" id="leftArrow">&#10095;</button>
+            </div>
+<!-- calender of attandance -->
             <div id="calander">
                 <h4>September</h4>
-                <div class="days">
+                <div class="days"> 
                     <p>Sun</p>
                     <p>Mon</p>
                     <p>Tue</p>
                     <p>Wed</p>
-                    <p>Thru</p>
+                    <p>Thr</p>
                     <p>Fri</p>
                     <p>Sat</p>
                 </div>
 
                 <div class="date">
-                    <p class="number empty"></p>
-                    <p class="number empty"></p>
-                    <p class="number absent">1</p>
+                    <p class="number"></p>
+                    <p class="number"></p>
+                    <p class="number">1</p>
                     <p class="number">2</p>
                     <p class="number">3</p>
                     <p class="number">4</p>
@@ -174,8 +190,8 @@
 
                 <div class="date">
                     <p class="number">6</p>
-                    <p class="number absent">7</p>
-                    <p class="number absent">8</p>
+                    <p class="number">7</p>
+                    <p class="number">8</p>
                     <p class="number">9</p>
                     <p class="number">10</p>
                     <p class="number">11</p>
@@ -195,39 +211,58 @@
                 <div class="date">
                     <p class="number">20</p>
                     <p class="number">21</p>
-                    <p class="number absent">22</p>
+                    <p class="number">22</p>
                     <p class="number">23</p>
                     <p class="number">24</p>
                     <p class="number">25</p>
-                    <p class="number absent">26</p>
+                    <p class="number">26</p>
                 </div>
 
                 <div class="date">
                     <p class="number">27</p>
                     <p class="number">28</p>
                     <p class="number">29</p>
-                    <p class="number absent">30</p>
-                    <p class="number empty"></p>
-                    <p class="number empty"></p>
-                    <p class="number empty"></p>
+                    <p class="number">30</p>
+                    <p class="number"></p>
+                    <p class="number"></p>
+                    <p class="number">4</p>
+                </div>
+
+                <div class="date">
+                    <p class="number"></p>
+                    <p class="number"></p>
+                    <p class="number"></p>
+                    <p class="number"></p>
+                    <p class="number"></p>
+                    <p class="number"></p>
+                    <p class="number">1</p>
                 </div>
                 <hr>
                 <div id="scale">
+                    <button class="arrow-btn" id="leftArrow">&#10094;</button>
 
                     <div class="scale-element">
-                        <div class="number"></div>
+                        <div class="number" style="background-color: rgb(85, 170, 100);"></div>
                         <p>Present</p>
                     </div>
 
                     <div class="scale-element">
-                        <div class="number absent"></div>
+                        <div class="number" style="background-color: rgb(214, 76, 76);"></div>
                         <p>Absent</p> 
                     </div>
+
+                    <div class="scale-element">
+                        <div class="number" style="background-color: rgb(137, 20, 224,0.8);"></div>
+                        <p>Holiday</p> 
+                    </div>
+
+                    <button class="arrow-btn" id="leftArrow">&#10095;</button>
                 </div>
             </div>
 
         </div>
 
     </div>
+    <script src="attandance.js"></script>
 </body>
 </html>
