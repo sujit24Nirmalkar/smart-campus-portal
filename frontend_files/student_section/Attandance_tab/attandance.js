@@ -9,31 +9,31 @@ let currntAttendance = document.querySelector("#currnt-attandance h1 b");
 // calander section
 const now = new Date();
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-let currntMonth = 1;
+let currntMonth = 0;
 let days = document.querySelectorAll(".days p");
 let date = document.querySelectorAll(".date");
 let number = document.querySelectorAll(".date p");
 
+
 // syntax maths = [attendance, totallecture, percent];
 let subjectLecture = {
-    Mathematics:[22, 30],
-    deld:[24, 40],
-    java:[24, 60],
-    os:[54, 56],
-    webdev:[34, 37],
-    bhagwatgita:[2, 5]
+    Mathematics:[],
+    deld:[],
+    java:[],
+    os:[],
+    webdev:[],
+    bhagwatgita:[]
 }
 
 // dynamic calander Updation 
 let arrow = document.querySelectorAll(".arrow-btn");
 let subject = document.querySelector("#currnt-attandance p");
 let currentIndx = 0; 
-let subjectLectureArray = Object.entries(subjectLecture);
-let arrayLen = subjectLectureArray.length
- 
 
 
-// 1 = present, 0 = absent, h = holiday;
+
+
+// 1 = present, 0 = absent, h = holiday; 
 let dynamicAttendanceRegister = {
 
     Mathematics: [
@@ -127,10 +127,40 @@ let dynamicAttendanceRegister = {
     ]
 };
 
-// functions for works 
 
+
+// -------------------------------functions for works---------------------------------------- 
+
+//converting data from string to integer form 
+
+function convertor (source, month, target, initial) {
+    for (let i in source){
+        let presenties =0;
+        let holiday =0;
+        let totallecture = 0;
+        for(let k =initial; k<=month; k++){
+            for(let j of source[i][k]){
+                if (j === "1"){
+                    totallecture++;
+                    presenties++;
+                }
+                    
+                else if (j === "h"){
+                    holiday++;
+                    totallecture++;
+                }
+                    
+                else{
+                    totallecture++;
+                }
+            }
+        }
+
+        target[i] = [presenties, totallecture];
+    }
+}
 // calculating the pecentage of attendance;
-function academics(parameter) {
+function academic(parameter) {
     let totallecture = 0;
     let attendance = 0; 
     
@@ -141,7 +171,7 @@ function academics(parameter) {
     }
 
     let percent = attendance/totallecture*100;
-    return [percent, attendance, totallecture,];
+    return [percent, attendance, totallecture];
 }
 
 // fillig the progress bar 
@@ -220,6 +250,7 @@ function arrowCalRight () {
         calanderUpdation(firstDayofMonth, totalDays, dynamicAttendanceRegister[subject.innerText][now.getMonth()+currntMonth]);
     }
     else 
+        
         currntMonth = 0;
 }
 
@@ -265,7 +296,11 @@ function arrowright () {
          
 }
 
-overallAcademics = academics(subjectLecture);
+// intial state of my website
+convertor(dynamicAttendanceRegister, now.getMonth(), subjectLecture, 7);
+overallAcademics = academic(subjectLecture);
+let subjectLectureArray = Object.entries(subjectLecture);
+let arrayLen = subjectLectureArray.length;
 
 let indx = 0;
 for (let i in subjectLecture){
@@ -284,18 +319,19 @@ for (let i = 0; i<3; i++){
 }
 
 
-
-
-
-
-
-
-//final events and methods 
-
+ 
 subject.innerText = subjectLectureArray[0][0];
+const intialDay = new Date(now.getFullYear(), now.getMonth(), 1).getDay();
+const initialTotalDays = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
+const initialAttend = dynamicAttendanceRegister[subject.innerText][now.getMonth()];
+document.querySelector("#calander h4").innerText = months[now.getMonth()];  //calendar month head updation 
+calanderUpdation(intialDay,initialTotalDays,initialAttend);
+console.log(subjectLecture)
+//final events and methods
 arrow[0].addEventListener("click", arrowleft);
 arrow[1].addEventListener("click", arrowright);
 
 
 arrow[2].addEventListener("click", arrowCalLeft);
 arrow[3].addEventListener("click", arrowCalRight);
+

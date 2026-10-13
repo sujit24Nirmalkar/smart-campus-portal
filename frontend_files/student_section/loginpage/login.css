@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding: 0;
+}
+/* effects in login page  */
+
+.effect:hover{
+    background-color: rgb(245, 243, 243); 
+}
+
+.tap:active{
+    scale: calc(0.97);
+    color: white; 
+}
+
+body {
+    background-color: rgb(208, 195, 255);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.card { 
+    background-color: rgb(245, 243, 243); 
+    border-radius: 8px;
+    padding: 30px;
+    width: 26%;
+    height: 40%;
+    box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+
+i {
+    color:rgba(137, 43, 224,0.7);
+    scale: calc(2);
+}
+
+#userSelect{
+    background-color: rgb(208, 195, 255);
+    width: 95%;
+    height: 30px;
+    border-radius: 10px;
+    align-content: center;
+}
+
+#userSelect ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
+#userSelect ul li{
+    border-radius: 5px;
+    padding: 3px 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.userLogin {
+    background-color: rgb(208, 195, 255);
+    width: 17rem;
+    height: 2rem;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: 0px 3px 1px rgba(0,0,0, 0.2);
+}
+
+
+.userLogin:focus{
+    outline:none;
+}
+/* .otp {
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+} */
+   /* .otp-input {
+    width: clamp(20px, 5vw, 30px);
+    height: clamp(48px, 10vh);
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 600;
+    color: var(--text);
+    background: var(--input-bg);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    outline: none;
+    transition: 0.2s ease;
+    box-shadow: #939292 0px 8px 10px;
+    } */
+    /* .otp-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+    transition: scale(1.05);
+    }
+    .otp-input.filled {
+    border-color: var(--accent);
+    background: #565555;
+    } */
+h2 {
+    color:rgba(137, 43, 224,0.7);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color:rgba(137, 43, 224,0.7);
+    width: 95%;
+    height: 30px;
+    margin-top:10px;
+    border-radius: 10px;
+    align-content: center;
+    border-style: none;
+
+}
