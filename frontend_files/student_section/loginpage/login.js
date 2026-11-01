@@ -1,12 +1,29 @@
-let username = "admin@gmail.com";
-let pass = "2025";
+// Fetch the JSON payload from your PHP file
+
 let submit = document.querySelector("button")
-let loginDetails = document.querySelectorAll(".userLogin")
-submit.addEventListener("click", () => {
-    if (username === loginDetails[0].value && pass === loginDetails[1].value){
-        location.href = "../dashboard_tab/dashboard.html";
-    }
-    else{
-        console.log(loginDetails[0].value,loginDetails[1].value,username,pass);
-    }
+
+
+function verification (event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value
+    const password = document.getElementById("password").value
+
+    fetch('login.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' }, // We are explicitly sending JSON!
+    body: JSON.stringify({ 
+        uname: username, 
+        pass: password
+    }) // Clean object structure, no text concatenations needed!
 })
+.then(response => {return response.json()})
+.then(data => {
+    if (data.status === "success")
+        window.location.href = ("../dashboard_tab/dashboard.html")
+    else {
+        submit.innerText = "Login Denied"
+    }
+});
+}
+
+submit.addEventListener('click', verification);

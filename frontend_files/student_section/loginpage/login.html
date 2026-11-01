@@ -19,7 +19,7 @@
         <li class="effect" >Admin</li>
       </ul>
     </div>
-    <form action="">
+    <form method=post >
       <input type="email" name="username" id="username" class="userLogin" placeholder="   Email" />
       <input type="password" name="password" id="password" class="userLogin"  placeholder="   password" />
       <!-- <button type="button">OTP</button> -->
@@ -29,7 +29,7 @@
         <input type="text" maxlength="1" class="otp-input" />
         <input type="text" maxlength="1" class="otp-input" />
       </div> -->
-      <button type="button" class="tap">Login</button>
+      <button type="submit" class="tap" name="submit" id="btn">Login</button>
     </form>
   </div>
   <script src = "login.js"></script>

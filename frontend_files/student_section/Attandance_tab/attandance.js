@@ -159,6 +159,7 @@ function convertor (source, month, target, initial) {
         target[i] = [presenties, totallecture];
     }
 }
+
 // calculating the pecentage of attendance;
 function academic(parameter) {
     let totallecture = 0;
