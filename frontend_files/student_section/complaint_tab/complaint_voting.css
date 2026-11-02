@@ -205,13 +205,14 @@ body{
     margin-top: 10px;
 }
 
-#prblm-id{
-    margin-left:2rem;
+.prblm-id{
+    margin-left:1rem;
     margin-top:0.25rem;
     margin-bottom:0.25rem;
+    font-weight: 600;
 }
 
-#status{
+.status{
     background-color: rgba(137, 43, 224,0.7);
     margin-right:2rem;
     padding: 2px 8px 2px 8px;
