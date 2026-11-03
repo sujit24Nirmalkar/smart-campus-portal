@@ -18,7 +18,7 @@ let number = document.querySelectorAll(".date p");
 // syntax maths = [attendance, totallecture, percent];
 let subjectLecture = {
     Mathematics:[],
-    deld:[],
+    deld:[], 
     java:[],
     os:[],
     webdev:[],
@@ -37,18 +37,18 @@ let currentIndx = 0;
 let dynamicAttendanceRegister = {
 
     Mathematics: [
-    "hhhhh010101011111h0001010000h0", 
+    "hhhhh010101011111h0001010000h0",
     "00000000h10h1h1001001100101101",
-    "101110111110h10h110000110hhh1h0", 
-    "111h1h0001011h001110010011011h1", 
-    "01h1010h11010h1hh000hh01h01110",  
-    "1111h0h110100010h10000010h1010",  
-    "hh1h00h0h10011h0h11000h11h1h00", 
-    "0h10101001010000101hh010h0101h",   
-    "0100111101010000h0101h1111011h",  
-    "000h1h00011h111h00hh1h0hh111h00",  
-    "11h100h110001h0h001hhh001h001h",  
-    "1h01101011011hh0h10h1001010010"   
+    "101110111110h10h110000110hhh1h0",
+    "111h1h0001011h001110010011011h1",
+    "01h1010h11010h1hh000hh01h01110",
+    "1111h0h110100010h10000010h1010",
+    "hh1h00h0h10011h0h11000h11h1h00",
+    "0h10101001010000101hh010h0101h",
+    "0100111101010000h0101h1111011h",
+    "000h1h00011h111h00hh1h0hh111h00",
+    "11h100h110001h0h001hhh001h001h",
+    "1h01101011011hh0h10h1001010010" 
     ],
 
     deld: [

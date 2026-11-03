@@ -28,6 +28,15 @@ function yesTap() {
     catagory.disabled = true;
     submitBtn.style.pointerEvents = "none";
     yes.disabled = true;
+    fetch('complaint_registration.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }, // We are explicitly sending JSON!
+        body: JSON.stringify({ 
+            description : input.value,
+            catagory_id : catagory.value,
+            state : "yes"
+        })
+    })
     complaintUpdation(); 
 }
 
@@ -35,12 +44,21 @@ function complaintUpdation() {
     let recentComplaint = document.querySelector("#recent-complaints");
     let el = document.createElement("div");
     recentComplaint.append(el);
-    el.innerHTML=complaintTag.innerHTML; 
+    el.innerHTML=`
+
+                    <div class="problem-head">
+                        <p><b>CHGTH8957</b></p>
+                        <p>pending</p>
+                    </div>
+
+                    <p class="prblm-stmtn">catagory mess food quality is to low, too oily food !! fans are not</p>
+                    <p class="catagory">catagory</p>`
+
     el.setAttribute("class","complaint");
-    let complaintStmnt = document.querySelectorAll(".prblm-stmtn");
-    let complaintCatagory = document.querySelectorAll(".catagory");
-    complaintStmnt[complaintStmnt.length - 1].innerText = input.value; 
-    complaintCatagory[complaintCatagory.length - 1].innerText = catagory.value;
+    let complaintStmnt = el.querySelector(".prblm-stmtn");
+    let complaintCatagory = el.querySelector(".catagory");
+    complaintStmnt.innerText = input.value;
+    complaintCatagory.innerText = catagory.value;
     let totalBox = document.querySelector("#total-box");
     totalBox.innerText=("Total "+complaintStmnt.length);
 }

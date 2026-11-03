@@ -9,21 +9,21 @@ function verification (event) {
     const password = document.getElementById("password").value
 
     fetch('login.php', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' }, // We are explicitly sending JSON!
-    body: JSON.stringify({ 
-        uname: username, 
-        pass: password
-    }) // Clean object structure, no text concatenations needed!
-})
-.then(response => {return response.json()})
-.then(data => {
-    if (data.status === "success")
-        window.location.href = ("../dashboard_tab/dashboard.html")
-    else {
-        submit.innerText = "Login Denied"
-    }
-});
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }, // We are explicitly sending JSON!
+        body: JSON.stringify({ 
+            uname: username, 
+            pass: password
+        }) // Clean object structure, no text concatenations needed!
+    })
+    .then(response => {return response.json()})
+    .then(data => {
+        if (data.status === "success")
+            window.location.href = ("../dashboard_tab/dashboard.html")
+        else {
+            submit.innerText = "Login Denied"
+        }
+    });
 }
 
 submit.addEventListener('click', verification);

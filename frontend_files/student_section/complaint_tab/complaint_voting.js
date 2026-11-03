@@ -32,6 +32,7 @@ async function load() {
         el.querySelector(".status").innerText = complaint[i].status
         el.querySelector(".prblm-stmtn").innerText = complaint[i].description
         el.querySelector(".catagory").innerText = complaint[i].complaint_tag
+        totalBox.innerText = "Total "+complaint.length;
         document.querySelector("#complaint-box").append(el)   
     }
 
