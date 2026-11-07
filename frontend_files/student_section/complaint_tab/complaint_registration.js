@@ -6,6 +6,26 @@ let input = document.querySelector("textarea");
 let catagory = document.querySelector("select");
 let complaintTag = document.querySelector(".complaint");
 
+fetch('complaint_registration.php').then(res => {return res.json()})
+.then(data => {
+    if(data.status == "success"){
+        document.querySelector("#username b").innerText = data.username
+        let course = document.getElementById("course")
+        let img = document.querySelector("#user-intro img")
+        img.setAttribute("src", data.profile_pic)
+        if (data.year == 1){
+            course.innerHTML = `${data.course} (${data.branch}) ${data.year}<sup>st</sup> Year`
+        }
+        else if (data.year == 2){
+            course.innerHTML = `${data.course} (${data.branch}) ${data.year}<sup>nd</sup> Year`
+        }
+        else if (data.year == 3)
+            course.innerHTML = `${data.course} ( ${data.branch} ) ${data.year}<sup>rd</sup> Year`
+        else 
+            course.innerHTML = `${data.course} (${data.branch}) ${data.year}<sup>th</sup> Year`
+        console.log(document.querySelector("#username b").innerText)
+    }
+});
 
 
 // complaint text checking function 

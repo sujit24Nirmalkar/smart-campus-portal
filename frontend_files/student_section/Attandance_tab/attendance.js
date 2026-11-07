@@ -149,7 +149,7 @@ function convertor (source, month, target, initial) {
                     holiday++;
                     totallecture++;
                 }
-                    
+
                 else{
                     totallecture++;
                 }

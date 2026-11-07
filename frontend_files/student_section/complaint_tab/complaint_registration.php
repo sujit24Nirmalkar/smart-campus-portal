@@ -11,6 +11,18 @@ if ($mycon->connect_error){
     echo json_encode(["status" => "connectionNotEstablished"]);
 }
 else {
+
+    //updating the user info 
+    echo json_encode([
+        "status"=>"success",
+        "profile_pic" =>$_SESSION['profile_pic'],
+        "username"=>$_SESSION['name'],
+        "year"=>$_SESSION['year'],
+        "branch"=>$_SESSION['branch'],
+        "course"=>$_SESSION['course']
+    ]);
+
+    //reading input from javaScript
     $jsonInput = file_get_contents('php://input');
     $data = json_decode($jsonInput, true);
 

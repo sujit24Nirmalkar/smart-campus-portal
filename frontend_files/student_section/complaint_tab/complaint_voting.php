@@ -13,12 +13,24 @@ if ($mycon->connect_error){
 }
 
 else {
+
     $sql = "select * from complaints";
     $ps=$mycon->prepare($sql);
     $ps->execute();
     $records = $ps->get_result();
     $allcomplaints= $records->fetch_all(MYSQLI_ASSOC);
-    echo json_encode($allcomplaints);
+
+    echo json_encode([
+
+        "status"=>"success",
+        "profile_pic" =>$_SESSION['profile_pic'],
+        "username"=>$_SESSION['name'],
+        "year"=>$_SESSION['year'],
+        "branch"=>$_SESSION['branch'],
+        "course"=>$_SESSION['course'],
+        "complaints"=>$allcomplaints
+        
+    ]);
 
 }
 ?>

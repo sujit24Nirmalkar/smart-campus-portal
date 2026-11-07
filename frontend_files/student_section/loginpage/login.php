@@ -26,15 +26,19 @@ else {
         $username = "";
         $userpass = "";
     }
-    $sql = "select * from login_page where username = ?";
+    $sql = "select * from login_page where email = ?";
     $ps = $mycon->prepare($sql);
     $ps->bind_param("s",$username);
     $ps->execute();
     $result = $ps->get_result();
     if ($row = $result->fetch_assoc()){
-        if($userpass === $row['userpass'] && $username === $row['username']){
+        if($userpass === $row['password'] && $username === $row['email']){
 
-            $_SESSION['username']=$username;
+            $_SESSION['profile_pic'] = $row['profile_pic'];
+            $_SESSION['name']=$row['name'];
+            $_SESSION['year']=$row['year'];
+            $_SESSION['course']=$row['course'];
+            $_SESSION['branch']=$row['branch'];
             $_SESSION['password']=$userpass;
             $_SESSION['is_logged']=true;
             echo json_encode(["status" => "success"]);
