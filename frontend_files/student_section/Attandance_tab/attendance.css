@@ -92,8 +92,10 @@ body{
     height: 100vh;;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap:10px;   
+    justify-content: flex-start;
+    gap: 10px;
+    
+    /* gap:10px;    */
 }
 
 /* tab intro section */
@@ -158,7 +160,7 @@ body{
     margin: 0px ;
 }
 
-#overall-attend div {
+.description {
     background-color: rgb(245, 243, 243);   
     border-radius:9px;
     height: 70px;
@@ -171,11 +173,20 @@ body{
     justify-content: center; 
 }
 
+.description p{
+    font-weight: 600;
+}
+
+.description h1 {
+    color: rgb(137, 20, 224,0.8);
+}
+
 #sub-wise-attend{
     background-color: rgb(245, 243, 243);   
     border-radius:9px;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
-    height: 250px;
+    font-size: 10px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,6 +199,7 @@ body{
 #subject h3{
     margin: 0 15px;
 }
+
 
 #subject div {
     background-color:rgba(137, 43, 224,0.7);
@@ -205,23 +217,29 @@ body{
     /* background-color: rgb(23, 128, 128); */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 15px;
     font-weight: 550;
 }
 
 .attandence-bar{
-    background-color:rgba(137, 43, 224,0.7);
+    background-color: rgb(197, 182, 224);
     margin: 0px;
     width : 450px;
     height: 11px;
     border-radius: 10px; 
     position: absolute;
-    right:85px;   
+    right:95px;   
 }
 
-/* .attandence-bar-container{
-    background-color: aquamarine;
-} */
+.fill {
+    /* background-color:rgba(137, 43, 224,0.7); */
+    background-color: hsl(120, 79%, 45%);
+    width: 90%;
+    height: 11px;
+    border-radius: 10px;
+}
+
 
 #detail-analysis{
     display:flex;
@@ -233,8 +251,21 @@ body{
     background-color: rgb(245, 243, 243);   
     border-radius:9px;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
-    height: 200px;
+    height: 230px;
     width: 340px;
+    display: flex;
+    gap:7px;
+    justify-content: center;
+    align-items: center; 
+}
+.arrow-btn {
+    background: none;
+    border: none;
+    font-size: 1em;
+    color:rgb(54, 54, 54);
+}
+
+#currnt-attandance div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -247,10 +278,14 @@ body{
     margin:5px;
 }
 
+#currnt-attandance p{
+    font-weight: 600;
+}
+
 #calander{
     background-color: rgb(245, 243, 243);   
     border-radius:9px;
-    height: 200px;
+    height: 230px;
     box-shadow: 0px 4px 5px rgba(0,0,0, 0.2);
     width:650px;
 }
@@ -262,50 +297,46 @@ body{
 
 #calander hr {
     margin: 3px 15px;
-
 }
 
 .days p{
     margin: 0px;
-    /* background-color: aqua; */
     font-size: 13px;
+    width: 25px;
+    font-weight: 600;
 }
 
 .days {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .number{
     /* background-color:rgba(137, 43, 224,0.7); */
-    background-color: rgb(85, 170, 100);
+    /* background-color: rgb(214, 76, 76);  absent color */
+    /* background-color: rgb(197, 182, 224);  empty color */
+    /* color: rgb(137, 20, 224,0.8); holiday (no working day) */
+
+    /* background-color: rgb(85, 170, 100);  present color */
     font-size: 13px;
     width: 30px;
     height: 20px;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;  
 }
+
 .date{
     /* background-color: rgb(25, 173, 173); */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 5px;
     /* border: 2px solid black; */
 }
 
-.absent {
-    background-color: rgb(214, 76, 76);
-}
-
-.empty {
-    background-color: rgb(197, 182, 224);
-}
-
 #scale {
-    margin:0px;
+    margin: 0px;
     display: flex;
     justify-content: space-around;
     font-size: 12px;
