@@ -46,9 +46,7 @@ else {
         else {
             echo json_encode(["status" => "noUserFound"]);
         }
-    }
-
-    
+    }   
 }
 
 ?>

@@ -31,7 +31,24 @@ let subject = document.querySelector("#currnt-attandance p");
 let currentIndx = 0; 
 
 
-
+fetch('attendance.php').then(res => {return res.json()})
+.then(data =>{
+    document.querySelector("#username b").innerText = data.username
+    let course = document.getElementById("course")
+    let img = document.querySelector("#user-intro img")
+    img.setAttribute("src", data.profile_pic)
+    if (data.year == 1){
+        course.innerHTML = `${data.course} (${data.branch}) ${data.year}<sup>st</sup> Year`
+    }
+    else if (data.year == 2){
+        course.innerHTML = `${data.course} (${data.branch}) ${data.year}<sup>nd</sup> Year`
+    }
+    else if (data.year == 3)
+        course.innerHTML = `${data.course} ( ${data.branch} ) ${data.year}<sup>rd</sup> Year`
+    else 
+        course.innerHTML = `${data.course} (${data.branch}) ${data.year}<sup>th</sup> Year`
+    console.log(document.querySelector("#username b").innerText)
+})
 
 // 1 = present, 0 = absent, h = holiday; 
 let dynamicAttendanceRegister = {
